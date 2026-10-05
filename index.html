@@ -58,6 +58,18 @@
     color: var(--ink-soft);
   }
   header.top p a { color: var(--glass); text-underline-offset: 3px; }
+  header.top .byline { font: 600 20px/1 var(--display); color: var(--glass); margin-bottom: 10px; }
+  header.top .intro { max-width: 44ch; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .links a {
+    font: 500 15px/1 var(--display);
+    padding: 9px 13px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--panel);
+    text-decoration: none;
+  }
+  .links a:hover { border-color: var(--glass); color: var(--glass); }
 
   /* Stage */
   .stage-wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
@@ -178,8 +190,18 @@
 <body>
 
 <header class="top">
-  <h1>3D models for VirtuChemLab</h1>
-  <p><span id="count">0</span> props I modelled for a virtual chemistry lab. Drag to rotate, scroll to zoom. Source on <a href="https://github.com/AkshayK9712/3d-MODELS" target="_blank" rel="noopener">GitHub</a>.</p>
+  <div>
+    <div class="byline">Akshay K</div>
+    <h1>3D models for VirtuChemLab</h1>
+  </div>
+  <div class="intro">
+    <p><span id="count">0</span> props I modelled for a virtual chemistry lab. Drag to rotate, scroll to zoom.</p>
+    <nav class="links" aria-label="Project links">
+      <a href="https://git.cs.uni-paderborn.de/virtuchemlab/virtuchemlabunity" target="_blank" rel="noopener">Full project</a>
+      <a href="https://www.eim.uni-paderborn.de/en/eim-news-single-en/im-chemielabor-der-zukunft" target="_blank" rel="noopener">About the project</a>
+      <a href="https://github.com/AkshayK9712/3d-MODELS" target="_blank" rel="noopener">Model files on GitHub</a>
+    </nav>
+  </div>
 </header>
 
 <div class="stage-wrap">
